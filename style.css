@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* MAIN COLORS */
+    --WHITE: rgb(255, 255, 255);
+    --BLACK: rgb(17, 17, 17);
+    --GRAY: rgb(247, 247, 247);
+    
+    /* COMPONENT COLORS */
+    --BG-COLOR: rgb(105, 12, 192);
+    --CARD-COLOR: rgb(255, 255, 255);
+    --BTN-COLOR: rgb(18, 34, 68);
+    --LABEL-COLOR: rgb(71, 71, 71);
+    --TEXT-COLOR: rgb(201, 201, 201);
+    --ICON-COLOR: rgb(21, 163, 21);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(124, 4, 148, 0.91), rgba(1, 16, 150, 0.91));
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100svh;
+    backdrop-filter: blur(5px) saturate(80%);
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.021);
+}
+
+.container {
+    margin-inline: auto;
+    min-width: 500px;
+    max-width: 960px;
+    height: 100%;
+    overflow: hidden;
+    align-content: stretch;
+}
+
+.container .form {
+    min-width: 35%;
+    flex-grow: 1;
+    gap: 20px;
+    background-color: var(--CARD-COLOR);
+    padding: 40px 40px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.form h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--BTN-COLOR);
+}
+
+.form .formInput {
+    gap: 4px;
+}
+
+.form label {
+    color: var(--BTN-COLOR);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form .formInput input {
+    display: block;
+    padding: 16px;
+    background-color: var(--GRAY);
+    color: var(--LABEL-COLOR);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.form .formInput input::placeholder {
+    color: rgb(134, 134, 134);
+}
+
+.userCheck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.userCheck input[type="checkbox"] {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.userCheck label {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--LABEL-COLOR);
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: var(--BTN-COLOR);
+    display: block;
+    padding: 16px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: var(--GRAY);
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+}
+
+.container .banner {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.container .banner .slides {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.banner .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: none;
+}
+
+/* Utilities Class*/
+.error {
+    color: rgb(194, 44, 64);
+    font-size: 12px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.slides img.displaySlide {
+    display: block;
+    animation: fade 1000ms ease-in-out;
+    transition: animation 0.4s;
+}
+
+.banner button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.644);
+    background-color: transparent;
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+button.prev  {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+@keyframes fade {
+    from {opacity: .7;}
+    to {opacity: 1;}
+}

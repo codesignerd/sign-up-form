@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <section>
+        <div class="container flex-center">
+           <div class="form-container">
+
+            <form method="POST" class="form flex-column" id="form">
+
+                <div class="formInput">
+                <h2>Let's get you started</h2>
+                <p><label for="">Register an account with us to enjoy exclusive discount offers.</label></p>
+                </div>
+                
+                <div class="formInput flex-column">
+                    <label for="userName">Username</label>
+                    <input type="text" name="username" id="userName" placeholder="Enter username..." autocomplete="on">
+                    <p class="error"></p>
+                </div>
+        
+                <div class="formInput flex-column">
+                    <label for="userEmail">Email</label>
+                    <input type="email" name="email" id="userEmail" placeholder="john@example.com" autocomplete="on">
+                    <p class="error"></p>
+                </div>
+
+                <div class="formInput flex-column">
+                    <label for="userPassword">Password</label>
+                    <input type="password" name="password" id="userPassword" placeholder="****">
+                    <p class="error"></p>
+                </div>
+        
+                <div class="formInput userCheck">
+                    <div class="wrapper">
+                        <input type="checkbox" name="agreement" id="userCheck">
+                        <label for="userCheck"><span>By clicking you agreed to out Terms & Conditions</span></label>
+                    </div>
+                    <p class="error"></p>
+                </div>
+
+                <button type="submit" id="submitBtn"> Sign Up </button>
+            </form>
+           </div>
+
+            <div class="banner">
+                <div class="slides">
+                    <img class="slide" src="./img/image1.jpg" alt="image #1">
+                    <img class="slide" src="./img/image2.jpg" alt="image #2">
+                    <img class="slide" src="./img/image3.jpg" alt="image #3">
+                </div>
+                <button class="prev"><i class="bi bi-arrow-left-circle"></i><button>
+                <button class="next"><i class="bi bi-arrow-right-circle"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
